@@ -27,10 +27,6 @@ library('data.table')
 col_names = fread('features.txt')$V2 # names for fields in "X" tables
 activities = fread('activity_labels.txt')$V2 # Text description of "Y" tables
 
-is_mean_or_stdev <- function(x) {
-    # function to find strings that contain the titles we're looking for
-    grep("-mean()|-std()", col_names)
-}
 
 # Load training data
 library('dplyr')
